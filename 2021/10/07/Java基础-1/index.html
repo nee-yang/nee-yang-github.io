@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-  <title>Hello World [ Hexo ]</title>
+  <title>Java基础 （1）面向对象与面向过程 [ Hexo ]</title>
   
     <!-- stylesheets list from config.yml -->
     
@@ -63,28 +63,26 @@
 </div>
     </div>
     <div class="container">
-        <h1 class="post-title">Hello World</h1>
+        <h1 class="post-title">Java基础 （1）面向对象与面向过程</h1>
 <article class="post markdown-style">
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+  <pre><code>语言的性能与是否面向过程或者面向对象无关，大部分看语言的执行方式，我觉得性能大概是机器码（不用编译）&gt;C,C++(编译）&gt;、java(半编译半解释)&gt;html(解释)
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+错误解释：面向过程性能比面向对象高是因为面向对象类调用时需要实例化，开销比较大，比较消耗资源
+正确解释：面向对象也需要分配内存，计算内存偏移量，哪怕main()函数中没有调用一些函数，那些函数依然会被编译，真正原因是半编译语言，最终的执行代码并不是可以直接被CPU执行的二进制机器码。Java为了一次代码处处执行（即可移植性），有了一层中间码即字节码，而字节码转换成机器码的工作由JVM完成（C则直接编译为机器码）。
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+结论：Java为了可移植性牺牲了性能
+</code></pre>
+<p> <img src="java%E7%BC%96%E8%AF%91.png"></p>
+<pre><code>C移植性差：其编译出的输出文件的格式，只适用于某种CPU，其他不认识，因为不同CPU指令集（add之类的助记符、汇编的编写格式与标准）不同。
+</code></pre>
+<p> <img src="JVM.png"></p>
+<pre><code>与其说是Java虚拟机，不如说是Class文件虚拟机。
+</code></pre>
 
 </article>
 
     <div class="pagenator post-pagenator">
     
-    
-        <a class="extend prev post-prev" href="/2021/10/07/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">prev</a>
     
 
     
